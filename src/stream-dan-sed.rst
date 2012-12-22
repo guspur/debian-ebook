@@ -50,7 +50,7 @@ Selain menampilkannya ke layar komputer, anda juga dapat mengarahkan hasil penca
 
 ::
 
-   ~# cat bertanya\yang\baik.txt | grep elektronik > elektronik.txt
+   ~# cat bertanya\ yang\ baik.txt | grep elektronik > elektronik.txt
    ~# more elektronik.txt
 
 Output program di atas::
@@ -65,10 +65,15 @@ Output program di atas::
    $ tr 'A-Z' 'a-z' < bertanya\ yang\ baik.txt | tr –cs 'a-z' '\n' | sort | uniq > bertanya.txt
 
 Pada contoh di atas, dapatkah anda membayangkan output dari perintah tersebut. Jika melihat perintah tersebut mungkin pembaca pemula akan sedikit pusing melihatnya, namun cukup sederhana. Mari kita lihat secara terpisah dari penggabungan beberapa perintah:
+
 **tr 'A-Z' 'a-z' < bertanya\ yang\ baik.txt** – akan mengganti semua huruf kapital menjadi huruf kecil pada file text 'bertanya yang baik.text'.
+
 **tr -cs 'a-z' '\n'** – akan memenggal setiap kata ke baris baru
+
 **sort** – akan mengurutkan kata-kata tersebut sesuai abjad (a-z)
+
 **uniq** – akan menghilangkan salah satu kata yang sama
+
 sehingga output dari perintah di atas adalah::
 
    ada
@@ -154,6 +159,7 @@ Quote
 -----
 
 Terkadang command line Unix/GNU/Linux dapat membuat kita putus asa dan menyebalkan. Sebagai contoh penggunaan karakter-karakter aneh seperti $, \*, &, \\, \?. Namun, jika telah terbiasa maka penggunaan karakter-karakter tersebut bukan merupakan sesuatu yang sangat mengerikan. Bahkan penggunaannya dapat mempermudah melakukan aktivitas pada mode teks.
+
 Pada *bash shell*, karakter \* dan \? merupakan wildcard dan $ berarti variabel. Pada sub bab ini penulis mencoba menjelaskan qoute ('', \*, \\, \\\\) yang dapat digunakan untuk mempermudah saat bekerja di lingkungan mode teks GNU/Linux.
 
 Contoh 1::
@@ -173,13 +179,13 @@ Lihat betapa pentingnya penggunaan qoute ini. Jika tidak menggunakan quote (''),
 
 Contoh 2::
 
-   $ rm –rf 'data\*.txt'
+   $ rm –rf 'data*.txt'
 
 akan menghasilkan hasil berbeda dengan perintah berikut::
 
-   ~$ rm –rf data\*.txt
+   ~$ rm –rf data*.txt
 
-Pada contoh kedua di atas, file text yang cocok dengan *data\** seperti data.txt, data**ku**.txt, data**baruku**.txt, dll akan terhapus.
+Pada contoh kedua di atas, file text yang cocok dengan *data\** seperti data.txt, dataku.txt, databaruku.txt, dll akan terhapus.
 
 
 Proses Input dan Output
@@ -216,6 +222,7 @@ Output redirection dinotasikan dengan '>' atau '>>' seperti yang tampak pada gam
    Redirection standard output
 
 Output redirection ini banyak digunakan untuk:
+
 -  Menyalin hasil/error ke sebuah file untuk disimpan secara permanen.
 -  Menyalin hasil/error ke printer untuk mendapatkan sebuah dokumentasi dalam bentuk hardcopy.
 -  Mengkombinasikan dua buah perintah sehingga dapat digunakan secara bersamaan.
@@ -223,6 +230,7 @@ Output redirection ini banyak digunakan untuk:
 Karakter yang digunakan oleh operator output redirection:
 
 *Karakter operator output redirection:*
+
 +---------------+-------------------------------------------------------------------+
 |  Karakter     |          Fungsi                                                   |
 +---------------+-------------------------------------------------------------------+
