@@ -18,3 +18,4 @@ Contents:
    src/sistem-boot
    src/sistem-file-gnu-linux
    src/linux-shell
+   src/stream-dan-sed
