@@ -44,7 +44,7 @@ Untuk melakukan modifikasi atau perubahan kembali pada file tersebut, gunakan pe
 
 Splash pada Boot Loader LILO 
 ----------------------------
-Tampilan default dari lilo boat loader biasanya dalam mode text (merah,putih,hitam). Agar tampilan lilo boat loader lebih menarik, anda dapat menggunakan mode grafik yang dapat dibuat sesuai dengan kesukaan masing­masing orang. 
+Tampilan default dari lilo boat loader biasanya dalam mode text (merah,putih,hitam). Agar tampilan lilo boat loader lebih menarik, anda dapat menggunakan mode grafik yang dapat dibuat sesuai dengan kesukaan masing-masing orang.
 
 Langkah pertama yang anda lakukan adalah membuat file gambar (.bmp) dengan ukuran gambar 640x480. 
 
