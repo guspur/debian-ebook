@@ -41,7 +41,7 @@ Penulis ingin mencari kata 'elektronik' pada sebuah file text 'bertanya yang bai
 
 ::
 
-   ~# cat bertanya\yang\baik.txt | grep elektronik | more
+   ~# cat bertanya\ yang\ baik.txt | grep elektronik | more
 
 Output program di atas::
 
@@ -70,9 +70,9 @@ Output program di atas::
 
 Pada contoh di atas, dapatkah anda membayangkan output dari perintah tersebut. Jika melihat perintah tersebut mungkin pembaca pemula akan sedikit pusing melihatnya, namun cukup sederhana. Mari kita lihat secara terpisah dari penggabungan beberapa perintah:
 
-**tr 'A-Z' 'a-z' < bertanya\ yang\ baik.txt** – akan mengganti semua huruf kapital menjadi huruf kecil pada file text 'bertanya yang baik.text'.
+**tr 'A-Z' 'a-z' < bertanya\\ yang\\ baik.txt** – akan mengganti semua huruf kapital menjadi huruf kecil pada file text 'bertanya yang baik.text'.
 
-**tr -cs 'a-z' '\n'** – akan memenggal setiap kata ke baris baru
+**tr -cs 'a-z' '\\n'** – akan memenggal setiap kata ke baris baru
 
 **sort** – akan mengurutkan kata-kata tersebut sesuai abjad (a-z)
 
@@ -243,7 +243,7 @@ Karakter yang digunakan oleh operator output redirection:
 
 **Karakter operator output redirection:**
 
-+===============+===================================================================+
++---------------+-------------------------------------------------------------------+
 |  Karakter     |          Fungsi                                                   |
 +===============+===================================================================+
 |      >        | Mengirimkan output (redirection) ke sebuah file atau perangkat    |
@@ -277,7 +277,7 @@ Selain *output redirection* '>' mengarahkan keluarannya ke *output* standar beru
 
 .. figure:: images/stream/standar-output.jpg
 
-   Standar output menuju speaker
+   *Standar output menuju speaker*
 
 
 Misal::
@@ -305,13 +305,13 @@ Sedangkan penggunaan karakter ">>" dapat anda perhatikan perbedaan dari *output*
 
 
 Input redirection
------------------
+=================
 
 *Input redirection* adalah masukan perintah dapat diarahkan dari sebuah file dan dinotasikan dengan '<'.
 
 .. figure:: images/stream/input-redirection.jpg
 
-   Input redirection dari sebuah file
+   *Input redirection dari sebuah file*
 
 
 Penggunaan Karakter "<"
@@ -350,13 +350,13 @@ Perintah di atas akan membaca informasi masukan dari *file* "dataku" kemudian *o
 
 
 Standar kesalahan (error) menuju sebuah file
---------------------------------------------
+============================================
 
 Secara *default* standar *error* biasanya diarahkan ke terminal komputer. Namun, pengguna juga dapat mengarahkannya ke sebuah *file*. Untuk *bash shell* yang umum digunakan pada GNU/linux menggunakan notasi **2>&1**.
 
 .. figure:: images/stream/standar-error.jpg
 
-   Standar error ke sebuah file
+   *Standar error ke sebuah file*
 
 
 Misal::
@@ -365,7 +365,7 @@ Misal::
 
 
 Sed – stream editor
--------------------
+===================
 
 ``Sed`` merupakan *utility* unix yang dapat digunakan untuk mengganti teks atau *string* dengan *string* atau teks lain pada sebuah *file*.
 
@@ -385,7 +385,7 @@ Misal::
 
 
 ^C (tekan ctrl-C)
------------------
+=================
 
 Selanjutnya huruf "s kecil" yang terdapat pada kalimat di atas akan diganti dengan huruf "S besar". Kemudian dengan menggunakan *redirection* yang telah dijelaskan sebelumnya, maka *file* perubahan akan disimpan dengan nama *file* baru yaitu "databaru".
 
