@@ -215,7 +215,7 @@ Sebagai contoh, jika terdapat sebuah file dengan nama data.txt yang berisi 5 bua
    $ sort data.txt
 
 
-.. Keterangan::
+.. Note::
 
    data.txt merupakan masukan (input) bagi perintah ``sort`` sedangkan outputnya
    menuju ke terminal komputer.
@@ -298,7 +298,7 @@ Sedangkan penggunaan karakter ">>" dapat anda perhatikan perbedaan dari *output*
    $ more data.txt
 
 
-.. Keterangan::
+.. Note::
 
    Pada contoh di atas terlihat bahwa *output* dari perintah sebelumnya akan 
    ditambahkan pada bagian akhir dari kalimat tersebut (terulang 2x).
