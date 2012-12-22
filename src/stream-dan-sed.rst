@@ -3,8 +3,8 @@ Stream dan Sed
 ==============
 
 
-Piping dengan Notasi ``|``
-==========================
+Piping dengan Notasi "|"
+========================
 
 'Piping' merupakan utility GNU/Linux yang dapat digunakan untuk mengarahkan sebuah output perintah menjadi masukan bagi perintah yang lain.
 
@@ -36,6 +36,7 @@ Pada contoh di atas, output perintah ``cat`` akan menjadi masukan bagi perintah 
 
 
 **Contoh 2:**
+
 Penulis ingin mencari kata 'elektronik' pada sebuah file text 'bertanya yang baik.txt'. Secara logika kita dapat mencarinya secara manual dengan membuka file text tersebut terdahulu. Tapi jika jumlah kalimat pada file sangat banyak, maka pasti kita akan kerepotan sendiri mencarinya. Dengan bantuan 'piping' yang digabungkan dengan perintah ``grep``, pencarian kata tersebut akan sangat mudah.
 
 ::
@@ -44,9 +45,10 @@ Penulis ingin mencari kata 'elektronik' pada sebuah file text 'bertanya yang bai
 
 Output program di atas::
 
-   Tidak ada yang tahu jawabannya bukan berarti Anda diabaikan, walaupun memang sulit untuk membedakannya (karena sifat komunikasi elektronik yang faceless).
+   Tidak ada yang tahu jawabannya bukan berarti Anda diabaikan, walaupun memang 
+   sulit untuk membedakannya (karena sifat komunikasi elektronik yang faceless).
 
-Selain menampilkannya ke layar komputer, anda juga dapat mengarahkan hasil pencarian tersebut ke file text lain dengan menggunakan redirection ``>``.
+Selain menampilkannya ke layar komputer, anda juga dapat mengarahkan hasil pencarian tersebut ke file text lain dengan menggunakan redirection ">".
 
 ::
 
@@ -55,14 +57,16 @@ Selain menampilkannya ke layar komputer, anda juga dapat mengarahkan hasil penca
 
 Output program di atas::
 
-   Tidak ada yang tahu jawabannya bukan berarti Anda diabaikan, walaupun memang sulit untuk membedakannya (karena sifat komunikasi elektronik yang faceless)
+   Tidak ada yang tahu jawabannya bukan berarti Anda diabaikan, walaupun memang 
+   sulit untuk membedakannya (karena sifat komunikasi elektronik yang faceless)
 
 
 **Contoh 3:**
 
 ::
 
-   $ tr 'A-Z' 'a-z' < bertanya\ yang\ baik.txt | tr –cs 'a-z' '\n' | sort | uniq > bertanya.txt
+   $ tr 'A-Z' 'a-z' < bertanya\ yang\ baik.txt | tr –cs 'a-z' '\n' | sort | 
+   uniq > bertanya.txt
 
 Pada contoh di atas, dapatkah anda membayangkan output dari perintah tersebut. Jika melihat perintah tersebut mungkin pembaca pemula akan sedikit pusing melihatnya, namun cukup sederhana. Mari kita lihat secara terpisah dari penggabungan beberapa perintah:
 
@@ -139,7 +143,8 @@ sehingga output dari perintah di atas adalah::
 
 .. figure:: images/stream/konsep-tee.jpg
 
-   Konsep tee
+   *Konsep tee*
+
 
 Misal::
 
@@ -156,13 +161,15 @@ Pada contoh di atas, output perintah ``ps aux`` selain di simpan ke dalam file t
 
 
 Quote
------
+=====
 
 Terkadang command line Unix/GNU/Linux dapat membuat kita putus asa dan menyebalkan. Sebagai contoh penggunaan karakter-karakter aneh seperti $, \*, &, \\, \?. Namun, jika telah terbiasa maka penggunaan karakter-karakter tersebut bukan merupakan sesuatu yang sangat mengerikan. Bahkan penggunaannya dapat mempermudah melakukan aktivitas pada mode teks.
 
 Pada *bash shell*, karakter \* dan \? merupakan wildcard dan $ berarti variabel. Pada sub bab ini penulis mencoba menjelaskan qoute ('', \*, \\, \\\\) yang dapat digunakan untuk mempermudah saat bekerja di lingkungan mode teks GNU/Linux.
 
-Contoh 1::
+**Contoh 1:**
+
+::
 
    $ cat 'data baru aku.txt'
    kari  1018 0.0 0.3 1772  616 pts/1 T  13:00 0:00 more
@@ -177,7 +184,9 @@ Contoh 1::
 Lihat betapa pentingnya penggunaan qoute ini. Jika tidak menggunakan quote (''), perintah ``cat`` akan mencoba menampilkan tiga file yang berbeda yakni: data.txt, baru.txt, aku.txt.
 
 
-Contoh 2::
+**Contoh 2:**
+
+::
 
    $ rm –rf 'data*.txt'
 
@@ -189,7 +198,7 @@ Pada contoh kedua di atas, file text yang cocok dengan *data\** seperti data.txt
 
 
 Proses Input dan Output
------------------------
+=======================
 
 Hubungan antara sebuah program dan sumber informasinya dan kontrol disebut dengan standar input. Jika bukan sebuah program, maka standar input defaultnya adalah keyboard. Secara default, standar output dan error biasanya menuju ke terminal atau layar komputer.
 
@@ -197,7 +206,7 @@ Jika sebuah program atau perintah tereksekusi dengan benar, maka hasil dari ekse
 
 .. figure:: images/stream/proses-input-output.jpg
 
-   Proses input output
+   *Proses input output*
 
 Sebagai contoh, jika terdapat sebuah file dengan nama data.txt yang berisi 5 buah nama yang tidak tersusun secara berurut, maka untuk menampilkan isi file tersebut secara berurut dapat menggunakan perintah ``sort``.
 
@@ -205,13 +214,15 @@ Sebagai contoh, jika terdapat sebuah file dengan nama data.txt yang berisi 5 bua
 
    $ sort data.txt
 
-Keterangan:
 
-data.txt merupakan masukan (input) bagi perintah ``sort`` sedangkan outputnya menuju ke terminal komputer.
+.. Keterangan::
+
+   data.txt merupakan masukan (input) bagi perintah ``sort`` sedangkan outputnya
+   menuju ke terminal komputer.
 
 
 Output Redirection
-------------------
+==================
 
 Pada sistem GNU/Linux, keluaran (output) dari sebuah perintah secara default akan menuju ke terminal. Namun, keluaran sebuah perintah dapat dialihkan ke sebuah file dan proses ini disebut output redirection.
 
@@ -219,7 +230,7 @@ Output redirection dinotasikan dengan '>' atau '>>' seperti yang tampak pada gam
 
 .. figure:: images/stream/redirection.jpg
 
-   Redirection standard output
+   *Redirection standard output*
 
 Output redirection ini banyak digunakan untuk:
 
@@ -227,13 +238,14 @@ Output redirection ini banyak digunakan untuk:
 -  Menyalin hasil/error ke printer untuk mendapatkan sebuah dokumentasi dalam bentuk hardcopy.
 -  Mengkombinasikan dua buah perintah sehingga dapat digunakan secara bersamaan.
 
+
 Karakter yang digunakan oleh operator output redirection:
 
-*Karakter operator output redirection:*
+**Karakter operator output redirection:**
 
-+---------------+-------------------------------------------------------------------+
++===============+===================================================================+
 |  Karakter     |          Fungsi                                                   |
-+---------------+-------------------------------------------------------------------+
++===============+===================================================================+
 |      >        | Mengirimkan output (redirection) ke sebuah file atau perangkat    |
 |               | output yang lain (misal: printer, display monitor, dll).          |
 |               | Jika file tersebut sudah ada, maka secara otomatis akan ditimpah. |
@@ -286,9 +298,10 @@ Sedangkan penggunaan karakter ">>" dapat anda perhatikan perbedaan dari *output*
    $ more data.txt
 
 
-Keterangan:
+.. Keterangan::
 
-Pada contoh di atas terlihat bahwa *output* dari perintah sebelumnya akan ditambahkan pada bagian akhir dari kalimat tersebut (terulang 2x).
+   Pada contoh di atas terlihat bahwa *output* dari perintah sebelumnya akan 
+   ditambahkan pada bagian akhir dari kalimat tersebut (terulang 2x).
 
 
 Input redirection
