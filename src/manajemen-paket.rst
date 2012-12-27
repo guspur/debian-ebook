@@ -6,4 +6,8 @@ Manajemen paket
    :maxdepth: 3
    
    paket/repositori
-   paket/pasang
+   paket/biner
+   paket/dpkg
+   paket/apt-get
+   paket/dselect
+   paket/synaptic
