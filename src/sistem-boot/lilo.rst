@@ -57,10 +57,8 @@ gunakan perintah::
 
 Splash pada Boot Loader LILO
 ----------------------------
-<<<<<<< HEAD
+
 Tampilan default dari lilo boat loader biasanya dalam mode text (merah,putih,hitam). Agar tampilan lilo boat loader lebih menarik, anda dapat menggunakan mode grafik yang dapat dibuat sesuai dengan kesukaan masing-masing orang.
-=======
->>>>>>> 17ed1acf08c0deb63d24f5f8840de43c7c7d27fe
 
 Tampilan default dari lilo boat loader biasanya dalam mode text (merah,
 putih, hitam). Agar tampilan lilo boat loader lebih menarik, anda dapat 
