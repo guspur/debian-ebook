@@ -194,7 +194,7 @@ akan menghasilkan hasil berbeda dengan perintah berikut::
 
    ~$ rm –rf data*.txt
 
-Pada contoh kedua di atas, file text yang cocok dengan *data\** seperti data.txt, dataku.txt, databaruku.txt, dll akan terhapus.
+Pada contoh kedua di atas, file text yang cocok dengan \*data\*\* seperti data.txt, dataku.txt, databaruku.txt, dll akan terhapus.
 
 
 Proses Input dan Output
@@ -385,7 +385,7 @@ Misal::
 
 
 ^C (tekan ctrl-C)
-=================
+
 
 Selanjutnya huruf "s kecil" yang terdapat pada kalimat di atas akan diganti dengan huruf "S besar". Kemudian dengan menggunakan *redirection* yang telah dijelaskan sebelumnya, maka *file* perubahan akan disimpan dengan nama *file* baru yaitu "databaru".
 
@@ -399,5 +399,3 @@ Selanjutnya huruf "s kecil" yang terdapat pada kalimat di atas akan diganti deng
    command line Unix/GNU/Linux
    haruS berSabar memang untuk
    mempelajarinya. Ehehehe....
-
-

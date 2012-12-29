@@ -130,7 +130,7 @@ Penambahan User Account
 
 Pembuatan user account dapat menggunakan dua perintah yang berbeda, yakni
 useradd dan adduser. Berikut penjelasan masing-masing perintah pembuatan
-user::
+user:
 
 useradd
 '''''''
