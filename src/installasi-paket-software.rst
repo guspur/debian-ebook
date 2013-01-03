@@ -1,5 +1,7 @@
 ===========
 BAB 3
+===========
+===========
 INSTALASI PAKET SOFTWARE GNU/LINUX
 ===========
 3.1 Instalasi Paket Software dari Source Code
