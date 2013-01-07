@@ -14,6 +14,7 @@ Contents:
    src/pertamax
    src/pendahuluan
    src/instalasi
+   src/installasi-paket-software
    src/manajemen-paket
    src/sistem-file-gnu-linux
    src/linux-shell
