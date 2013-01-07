@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Debian GNU/Linux Tutorial
-==========================================
+Debian GNU/Linux 7th Edition
+============================
 
 Contents:
 
@@ -14,8 +14,10 @@ Contents:
    src/pertamax
    src/pendahuluan
    src/instalasi
+   src/installasi-paket-software
    src/manajemen-paket
    src/sistem-file-gnu-linux
    src/linux-shell
+   src/stream-dan-sed
    src/sistem-boot
    src/management-group-user-dan-hak-akses

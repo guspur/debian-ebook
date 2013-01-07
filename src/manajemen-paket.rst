@@ -8,3 +8,6 @@ Manajemen paket
    paket/repositori
    paket/biner
    paket/dpkg
+   paket/apt-get
+   paket/dselect
+   paket/synaptic
