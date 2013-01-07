@@ -10,7 +10,12 @@ sederhana yakni menerima perintah, menginterpretasikan perintah, menjalankan
 perintah, dan menunggu perintah masukan berikutnya. Berikut bagan loop
 interpreter sederhana yang dijalankan oleh shell unix ataupun GNU/Linux.
 
-.. image:: images/interpreter-loop.png
+.. figure:: images/interpreter-loop.png
+    	:align: center
+    	:figclass: align-center
+    	
+    	Interpreter loop
+
 
 Bab ini akan menjelaskan shell command yang sering digunakan oleh pengguna
 UNIX ataupun GNU/Linux.
@@ -38,21 +43,32 @@ Memulai Linux Shell
 
 Pada Start Menu – System – Konsole
 
-.. image:: images/start-menu-kde.png
+.. figure:: images/start-menu-kde.png
+    	:align: center
+    	:figclass: align-center
+    	
+    	Start Menu
 
-Atau pada panel klik ikon konsole seperti yang tampak pada gambar berikut:
-
-.. image:: images/panel-kde.png
 
 Selain itu, anda juga dapat menggunakan shortcut key Alt + F2 sehingga akan
 tampak jendela dialog Run Command berikut:
 
-.. image:: images/run-command-kde.png
+.. figure:: images/run-command-kde.png
+    	:align: center
+    	:figclass: align-center
+    	
+    	Run command
+
 
 Pada jendela dialog di atas ketikkan konsole kemudian klik opsi Run.
 Selanjutnya akan tampak shell berikut.
 
-.. image:: images/shell-konsole.png
+.. figure:: images/shell-konsole.png
+    	:align: center
+    	:figclass: align-center
+    	
+    	Shell – Konsole
+
 
 Karakter \`$` pada konsole sering disebut dengan prompt shell - karakter ini
 menandakan bahwa sistem siap menerima perintah masukan.
@@ -516,12 +532,16 @@ Untuk melakukan copy dan paste pada konsole tidak berbeda dengan cara yang
 dilakukan pada Xwindow. Anda hanya menyorot text yang ingin anda copy
 kemudian klik kanan pada text tersebut kemudian sorot opsi copy.
 
-.. image:: images/copy-text1.png
+.. figure:: images/copy-text1.png
+    	:align: center
+    	:figclass: align-center
 
 Selanjutnya posisikan kursor anda ke tempat di mana anda akan menyalin text
 tersebut, Kemudian klik kanan pada kursor --> sorot opsi paste.
 
-.. image:: images/paste-text1.png
+.. figure:: images/paste-text1.png
+    	:align: center
+    	:figclass: align-center
 
 **Menggunakan Command Alias**
 
@@ -606,7 +626,9 @@ Misal::
 
 Berikut tampilan silent-m.jpg dengan ImageMagick.
 
-.. image:: images/silent-m.png
+.. figure:: images/silent-m.png
+    	:align: center
+    	:figclass: align-center
 
 **Menampilkan Koleksi Gambar pada X Window**
 
